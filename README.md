@@ -8,4 +8,5 @@ I tried to recreate Spotify's homepage (https://open.spotify.com/) but (at the m
 # Folders Guide
 | Folder | Description |
 |-|-|
+| css | css' file for the Spotify's home page |
 | images | all the images used for the button and playlists |
