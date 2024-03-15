@@ -1,4 +1,4 @@
-# Homework-Spotify-
+# Homework Spotify
 
 Written using HTML and CSS
 
