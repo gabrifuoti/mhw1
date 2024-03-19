@@ -1,6 +1,6 @@
 html{
     background-color: #050402;
-    font-family: "Helvetica";
+    font-family: "Shippori Mincho";
     color:ghostwhite ;
 }
 
@@ -35,7 +35,7 @@ div {
     height: 85%;
     margin-bottom: 5px;
 }
-
+  
 .flex-left{
     display: flex;
     width: 28%;
@@ -106,13 +106,13 @@ div {
     opacity: 0.8;
 }
 
-.flex-library{
+.flex-library, .flex-search-library {
     display: flex;
     justify-content: space-between;
-    padding-right: 0;
+    padding-right: 0px;
 }
 
-.button-playlist-artist {    
+.button-playlist-artist, .button-playlist-artist-current {    
     text-decoration: none;
     transition: font-size 0.3s, font-weight 0.3s;
     background-color: #414141;
@@ -124,24 +124,17 @@ div {
 }
 
 .button-playlist-artist-current{    
-    text-decoration: none;
-    transition: font-size 0.3s, font-weight 0.3s;
     background-color: white;
     color: #414141;
-    font-size: 15px;
-    font-weight: bolder; 
-    border-radius: 10px;
-    padding: 7px 12px;
+}
+
+.button-playlist-artist{    
+    color: white;
+    background-color: #414141;
 }
 
 .button-playlist-artist:hover {
     opacity: 0.6;
-}
-
-.flex-search-library {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 0;
 }
 
 .flex-showall span{
@@ -152,25 +145,25 @@ div {
     font-size: 25px;
 }
 
-.img-list-playlist {
+.img-list-playlist, .img-list-artist  {
     width: 50px;
     height: 50px;
-    border-radius: 2px;
     margin-right: 10px;
 }
 
 .img-list-artist {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
+}
+
+.img-list-playlist {
+    border-radius: 2px;
 }
 
 .flex-list-playlist-artist {
     display: flex;
     flex-direction: column;
     height: 50%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .flex-list-playlist-artist div{
@@ -186,7 +179,7 @@ div {
 
 .homepage{
     width: 100%;
-    background: linear-gradient(to top, #121212  55%, darksalmon);
+    background: linear-gradient(to top, #121212  55%, rgb(33, 70, 191));
     opacity: 0.8;
     display: flex;
     flex-direction: column;
@@ -241,10 +234,12 @@ div {
 .made-for-you, .new-releases {
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .item-made-for-you{
-    height: 200px;
+    height: auto;
     width: 18%;
     padding: 0px;
     display: inline;
@@ -276,7 +271,7 @@ div {
 }
 
 .play {
-    height: auto;
+    height: 100%;
     width: auto;
     display: flex;
     justify-content: space-between;
@@ -333,4 +328,75 @@ div {
 
 .volume::-webkit-slider-runnable-track:hover{
     background: #66bb6a;
+}
+
+@media (max-width: 500px) {
+    
+    html{
+        font-size: 10px;
+    }
+
+    .flex{
+        flex-direction: column;
+        width:90%;
+    }
+
+    .flex-left{
+        order: 2;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .flex-right{
+        order: 1;
+        width: 95%;
+        height: 95%;
+    }
+
+    .library{
+        display: none;
+    }
+
+    .home-search{
+        flex-direction: row;
+        position: fixed;
+        bottom:0px;
+        margin-bottom: 0px;
+        height: auto;
+        width: 90%;
+    }
+
+    .homepage{
+        width: 95%;
+    }
+
+    .item-last-8{
+        width: 100%;
+    }
+
+    .showall{
+        display: none;
+    }
+
+    .item-made-for-you{
+        width: auto;
+    }
+
+    .play{
+        position: fixed;
+        bottom: 80px;
+        width: 100%;
+        margin-left: 0px;
+        height: auto;
+        background-color: #414141;
+    }
+
+    .reproduction-buttons{
+        display: none;
+    }
+
+    .show-play-buttons{
+        display: block;
+    }
 }
