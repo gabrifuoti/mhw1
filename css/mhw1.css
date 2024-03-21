@@ -271,7 +271,7 @@ div {
 }
 
 .play {
-    height: 100%;
+    height: auto;
     width: auto;
     display: flex;
     justify-content: space-between;
